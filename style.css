@@ -11,14 +11,16 @@
     font-family:'Poppins', sans-serif;
 }
 :root{
-    --bg-color:#074173;
-    --second-bg-color:#2A629A;
-/*135D66  265073    164863    102C57*/
+    --bg-color:#254336;
+    --second-bg-color:#0F0F0F;
+/*135D66  265073    164863    102C57 191717   black*/
     --text-color:rgb(255, 255, 255);
-    --main-color:#51829B;
+    --main-color:#3B5249;
+    --light-color:rgb(101, 133, 101);
   
 }
 html{
+  
     font-size: 62.5%;
     overflow-x: hidden;
 }
@@ -148,7 +150,7 @@ nav{
 }
 .social-media a:hover{
     background-image: linear-gradient(to right, red , yellow);
-    background: linear-gradient(rgba(0,0,0,.1),rgb(101, 188, 216));
+    background: linear-gradient(rgba(0,0,0,.1),var(--light-color));
     transform: translateY(0);
     box-shadow: 0 0 1rem var(--main-color);
 }
@@ -241,15 +243,16 @@ nav{
     background-color: var(--second-bg-color);
 }
 .about a{
-    background: #102C57;
-    border: #102C57 solid .1rem ;
+    background: var(--main-color);
+    border: var(--main-color) solid .1rem ;
     border-radius: .8rem;
+    color: var(--second-bg-color);
 }
 .about a:hover{
   
     background: var(--main-color);
   
-    box-shadow: 0 0 1rem lightblue;
+    box-shadow: 0 0 1rem var(--light-color);
 }
 .about-img img {
     width: 35vw;
@@ -299,7 +302,8 @@ nav{
     transition: .5s ease;
 }
 .services-container .card:hover{
-    border-color:lightblue;
+    border-color:var(--light-color);
+    box-shadow: 0 0 1rem var(--light-color);
     transform: scale(1.02);
 }
 .services-container .card i{
@@ -346,7 +350,7 @@ nav{
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0,0,0,.1),rgb(101, 188, 216));
+    background: linear-gradient(rgba(0,0,0,.1),var(--light-color));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -402,7 +406,7 @@ nav{
     transition: .5s ease;
 }
 .footer-iconTop a:hover{
-    box-shadow: 0 0 1rem lightblue;
+    box-shadow: 0 0 1rem var(--light-color);
 }
 .footer-iconTop a i{
     font-size: 2.4rem;
